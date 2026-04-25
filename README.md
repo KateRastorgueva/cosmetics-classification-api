@@ -71,13 +71,11 @@ Linux:
 <!--Структура проекта-->
 ### Структура проекта
 cosmetics_api/
-   main.py
-   requirements.txt
-   model/
-     cosmetics_model.pt
-  README.md
-
-text
+├── main.py
+├── requirements.txt
+├── model/
+│ └── cosmetics_model.pt
+└── README.md
 
 <!--Пример запроса и ответа-->
 ## Пример запроса и ответа
@@ -91,9 +89,8 @@ json
   "status": "ok"
 }
 POST /predict
-bash
 curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
-json
+
 {
   "class": "mascara",
   "probability": 0.9226731061935425,
