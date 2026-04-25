@@ -71,11 +71,11 @@ Linux:
 <!--Структура проекта-->
 ### Структура проекта
 cosmetics_api/
-├── main.py # FastAPI приложение
-├── requirements.txt # Зависимости
+├── main.py
+├── requirements.txt
 ├── model/
-│ └── cosmetics_model.pt # Обученная модель
-└── README.md # Документация
+│ └── cosmetics_model.pt
+└── README.md
 
 text
 
