@@ -1,23 +1,29 @@
 ## Colab и датасет
+
 Весь код обучения модели и тестирования API доступен в Colab:
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jGTugdvApstCRFS_gT0C7l4Banta9lyK)
+
 https://colab.research.google.com/drive/1jGTugdvApstCRFS_gT0C7l4Banta9lyK
+
 ### Датасет
+
 Датасет с изображениями доступен в Google Drive:
+
 [Ссылка на папку с датасетом](https://drive.google.com/drive/folders/1FnsepC6eK71MwYzGTgwrR42P7JzqGcmC)
 
 <!--Установка-->
 ## Установка (Windows/Linux)
 
-У вас должны быть установлены зависимости проекта
+Должны быть установлены зависимости проекта
 
 1. Клонирование репозитория 
 
-```git clone https://github.com/OkulusDev/CosmeticsAPI.git```
+```git clone https://github.com/KateRastorgueva/cosmetics-classification-api.git```
 
-2. Переход в директорию CosmeticsAPI
+2. Переход в директорию
 
-```cd CosmeticsAPI```
+```cd cosmetics-classification-api```
 
 3. Создание виртуального окружения
 
@@ -38,11 +44,6 @@ Linux:
 6. Запуск сервиса
 
 ```uvicorn main:app --reload```
-
-<!--Документация-->
-## Документация
-
-API документация доступна после запуска сервиса по ссылке http://127.0.0.1:8000/docs
 
 <!--Описание задачи-->
 ## Описание задачи
@@ -69,15 +70,14 @@ API документация доступна после запуска серв
 
 <!--Структура проекта-->
 ### Структура проекта
-
-```
 cosmetics_api/
-├── main.py                 # FastAPI приложение
-├── requirements.txt        # Зависимости
+├── main.py # FastAPI приложение
+├── requirements.txt # Зависимости
 ├── model/
-│   └── cosmetics_model.pt  # Обученная модель
-└── README.md               # Документация
-```
+│ └── cosmetics_model.pt # Обученная модель
+└── README.md # Документация
+
+text
 
 <!--Пример запроса и ответа-->
 ## Пример запроса и ответа
@@ -86,21 +86,14 @@ cosmetics_api/
 
 ```bash
 curl http://127.0.0.1:8000/health
-```
-
-```json
+json
 {
   "status": "ok"
 }
-```
-
-### POST /predict
-
-```bash
+POST /predict
+bash
 curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
-```
-
-```json
+json
 {
   "class": "mascara",
   "probability": 0.9226731061935425,
@@ -112,35 +105,18 @@ curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
     "other": 0.01899324543774128
   }
 }
-```
-
 <!--Результаты обучения модели-->
-## Результаты обучения модели
-
-| Показатель | Значение |
-|------------|----------|
-| Лучшая точность | 90.67% |
-| Финальная точность | 88.00% |
-| Количество эпох | 30 |
-| Batch size | 16 |
-| Learning rate | 0.0001 |
-| Размер датасета | 151 изображение |
-
+Результаты обучения модели
+Показатель	Значение
+Лучшая точность	90.67%
+Финальная точность	88.00%
+Количество эпох	30
+Batch size	16
+Learning rate	0.0001
+Размер датасета	151 изображение
 <!--Обработка ошибок-->
-## Обработка ошибок
-
-| Код | Ситуация | Ответ |
-|-----|----------|-------|
-| 400 | Неверный формат файла | {"detail": "Неверный формат. Поддерживаются JPEG, PNG"} |
-| 400 | Файл больше 10 МБ | {"detail": "Файл больше 10 МБ"} |
-| 500 | Внутренняя ошибка сервера | {"detail": "Ошибка при обработке изображения"} |
-
-<!--Зависимости-->
-## Зависимости
-
-Проект зависит от интерпретатора Python версии 3.7 или выше и следующих библиотек:
-- FastAPI
-- Uvicorn
-- PyTorch
-- torchvision
-- Pillow
+Обработка ошибок
+Код	Ситуация	Ответ
+400	Неверный формат файла	{"detail": "Неверный формат. Поддерживаются JPEG, PNG"}
+400	Файл больше 10 МБ	{"detail": "Файл больше 10 МБ"}
+500	Внутренняя ошибка сервера	{"detail": "Ошибка при обработке изображения"}
