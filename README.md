@@ -71,10 +71,15 @@ Linux:
 <!--Структура проекта-->
 ### Структура проекта
 cosmetics_api/
+
 ├── main.py
+
 ├── requirements.txt
+
 ├── model/
+
 │ └── cosmetics_model.pt
+
 └── README.md
 
 <!--Пример запроса и ответа-->
@@ -82,9 +87,8 @@ cosmetics_api/
 
 ### GET /health
 
-```bash
+```
 curl http://127.0.0.1:8000/health
-json
 {
   "status": "ok"
 }
@@ -102,6 +106,7 @@ curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
     "other": 0.01899324543774128
   }
 }
+
 <!--Результаты обучения модели-->
 Результаты обучения модели
 Показатель	Значение
