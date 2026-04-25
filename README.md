@@ -1,3 +1,11 @@
+## Colab и датасет
+Весь код обучения модели и тестирования API доступен в Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jGTugdvApstCRFS_gT0C7l4Banta9lyK)
+https://colab.research.google.com/drive/1jGTugdvApstCRFS_gT0C7l4Banta9lyK
+### Датасет
+Датасет с изображениями доступен в Google Drive:
+[Ссылка на папку с датасетом](https://drive.google.com/drive/folders/1FnsepC6eK71MwYzGTgwrR42P7JzqGcmC)
+
 ```markdown
 <!--Блок информации о репозитории в бейджах-->
 # Cosmetics Classification API
