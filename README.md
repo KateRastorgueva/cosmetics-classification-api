@@ -87,14 +87,14 @@ cosmetics_api/
 
 ### GET /health
 
-```
+```bash
 curl http://127.0.0.1:8000/health
+
 {
   "status": "ok"
 }
 POST /predict
 curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
-
 {
   "class": "mascara",
   "probability": 0.9226731061935425,
@@ -106,9 +106,6 @@ curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
     "other": 0.01899324543774128
   }
 }
-
-<!--Результаты обучения модели-->
-## Обработка ошибок
 Результаты обучения модели
 Показатель	Значение
 Лучшая точность	90.67%
@@ -117,8 +114,6 @@ curl -X POST http://127.0.0.1:8000/predict -F "file=@image.jpg"
 Batch size	16
 Learning rate	0.0001
 Размер датасета	151 изображение
-<!--Обработка ошибок-->
-## Обработка ошибок
 Обработка ошибок
 Код	Ситуация	Ответ
 400	Неверный формат файла	{"detail": "Неверный формат. Поддерживаются JPEG, PNG"}
