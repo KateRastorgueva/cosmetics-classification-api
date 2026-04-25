@@ -6,17 +6,6 @@ https://colab.research.google.com/drive/1jGTugdvApstCRFS_gT0C7l4Banta9lyK
 Датасет с изображениями доступен в Google Drive:
 [Ссылка на папку с датасетом](https://drive.google.com/drive/folders/1FnsepC6eK71MwYzGTgwrR42P7JzqGcmC)
 
-```markdown
-<!--Блок информации о репозитории в бейджах-->
-# Cosmetics Classification API
-
-Сервис компьютерного зрения для автоматической классификации косметической продукции по фотографиям.
-
-![Static Badge](https://img.shields.io/badge/FastAPI-Cosmetics_API-blue)
-![GitHub top language](https://img.shields.io/github/languages/top/OkulusDev/CosmeticsAPI)
-![GitHub](https://img.shields.io/github/license/OkulusDev/CosmeticsAPI)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
-
 <!--Установка-->
 ## Установка (Windows/Linux)
 
