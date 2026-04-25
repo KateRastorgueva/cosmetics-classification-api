@@ -71,11 +71,11 @@ Linux:
 <!--Структура проекта-->
 ### Структура проекта
 cosmetics_api/
-├── main.py
-├── requirements.txt
-├── model/
-│ └── cosmetics_model.pt
-└── README.md
+   main.py
+   requirements.txt
+   model/
+     cosmetics_model.pt
+  README.md
 
 text
 
